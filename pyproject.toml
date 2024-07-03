@@ -10,7 +10,7 @@ description = "Scikit-image regionprops for ilastik object classification."
 readme = "README.md"
 
 # TODO: Add your dependencies here:
-dependencies = ["ilastik", "typing_extensions"]
+dependencies = ["ilastik", "typing_extensions", "scikit-image"]
 requires-python = ">=3.9"
 
 
