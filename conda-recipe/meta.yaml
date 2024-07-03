@@ -38,5 +38,7 @@ test:
     - skimage_ilastik_oc_features
   commands:
     - pytest
+  source_files:
+    - tests
   requires:
     - pytest

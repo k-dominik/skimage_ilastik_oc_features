@@ -289,7 +289,7 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "tooltip": "perimeter_crofton",
             "advanced": False,
             "group": "Shape",
-            "no_3D": False,
+            "no_3D": True,
         },
         "solidity": {
             "displaytext": "Solidity",
