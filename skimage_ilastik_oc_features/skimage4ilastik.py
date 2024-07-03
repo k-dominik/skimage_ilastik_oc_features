@@ -68,14 +68,14 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "advanced": False,
             "group": "Shape",
         },
-        "axis_minor_length": {
-            "displaytext": "Ellipse minor axis length",
-            "detailtext": "The length of the minor axis of the ellipse that has the same normalized second central moments as the region.",
-            "tooltip":
-            "axis_minor_length",
-            "advanced": False,
-            "group": "Shape"
-        },
+        # excluided atm as it may result in errors: Exception axis_minor_length method in skimage.measure
+        # "axis_minor_length": {
+        #     "displaytext": "Ellipse minor axis length",
+        #     "detailtext": "The length of the minor axis of the ellipse that has the same normalized second central moments as the region.",
+        #     "tooltip": "axis_minor_length",
+        #     "advanced": False,
+        #     "group": "Shape"
+        # },
         "bbox": {
             "displaytext": "Bounding box coordinates",
             "detailtext": "Bounding box (min_row, min_col, max_row, max_col). Pixels belonging to the bounding box are in the half-open interval [min_row; max_row) and [min_col; max_col).",
@@ -164,13 +164,14 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "group": "Intensity",
             "channel_aware": True,
         },
-        "intensity_mean": {
-            "displaytext": "Intensity mean",
-            "detailtext": "Value with the mean intensity in the region.",
-            "tooltip": "intensity_mean",
-            "advanced": False,
-            "group": "Shape",
-        },
+        # doesn't currently work, check skimage
+        # "intensity_mean": {
+        #     "displaytext": "Intensity mean",
+        #     "detailtext": "Value with the mean intensity in the region.",
+        #     "tooltip": "intensity_mean",
+        #     "advanced": False,
+        #     "group": "Shape",
+        # },
         "intensity_min": {
             "displaytext": "Intensity min",
             "detailtext": "Value with the least intensity in the region.",
@@ -179,14 +180,15 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "group": "Intensity",
             "channel_aware": True,
         },
-        "intensity_std": {
-             "displaytext": "Intensity std",
-             "detailtext": "Standard deviation of the intensity in the region.",
-             "tooltip": "intensity_std",
-             "advanced": False,
-             "group": "Shape",
-             "channel_aware": True,
-         },
+        # doesn't currently work, check skimage
+        # "intensity_std": {
+        #      "displaytext": "Intensity std",
+        #      "detailtext": "Standard deviation of the intensity in the region.",
+        #      "tooltip": "intensity_std",
+        #      "advanced": False,
+        #      "group": "Shape",
+        #      "channel_aware": True,
+        #  },
         "label": {
             "displaytext": "Label",
             "detailtext": "The label in the labeled input image.",
@@ -216,13 +218,14 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "group": "Shape",
             "no_3D": True,
         },
-        "moments_normalized": {
-            "displaytext": "Moments normalized",
-            "detailtext": "Normalized moments (translation and scale invariant) up to 3rd order: nu_ij = mu_ij / m_00^[(i+j)/2 + 1] where m_00 is the zeroth spatial moment.",
-            "tooltip": "moments_normalized",
-            "advanced": False,
-            "group": "Shape",
-        },
+        # produces nans
+        # "moments_normalized": {
+        #     "displaytext": "Moments normalized",
+        #     "detailtext": "Normalized moments (translation and scale invariant) up to 3rd order: nu_ij = mu_ij / m_00^[(i+j)/2 + 1] where m_00 is the zeroth spatial moment.",
+        #     "tooltip": "moments_normalized",
+        #     "advanced": False,
+        #     "group": "Shape",
+        # },
         "moments_weighted": {
             "displaytext": "Moments weighted",
             "detailtext": "Spatial moments of intensity image up to 3rd order: wm_ij = sum{ array(row, col) * row^i * col^j } where the sum is over the row, col coordinates of the region.",
@@ -248,14 +251,15 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
             "no_3D": True,
             "channel_aware": True,
         },
-        "moments_weighted_normalized": {
-            "displaytext": "Moments weighted normalized",
-            "detailtext": "Normalized moments (translation and scale invariant) of intensity image up to 3rd order: wnu_ij = wmu_ij / wm_00^[(i+j)/2 + 1] where wm_00 is the zeroth spatial moment (intensity-weighted area).",
-            "tooltip": "moments_weighted_normalized",
-            "advanced": False,
-            "group": "Shape",
-            "channel_aware": True,
-        },
+        # produces nans
+        # "moments_weighted_normalized": {
+        #     "displaytext": "Moments weighted normalized",
+        #     "detailtext": "Normalized moments (translation and scale invariant) of intensity image up to 3rd order: wnu_ij = wmu_ij / wm_00^[(i+j)/2 + 1] where wm_00 is the zeroth spatial moment (intensity-weighted area).",
+        #     "tooltip": "moments_weighted_normalized",
+        #     "advanced": False,
+        #     "group": "Shape",
+        #     "channel_aware": True,
+        # },
         "num_pixels": {
             "displaytext": "Number of pixels",
             "detailtext": "Number of foreground pixels.",
