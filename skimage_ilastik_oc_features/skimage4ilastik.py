@@ -354,8 +354,8 @@ class Skimage4ilastik(ObjectFeaturesPlugin):
         # ilastik will give all features here, so we need to exclude the local ones
         global_features = {k: v for k, v in features.items() if "margin" not in v}
         # For skimage we need to treat channel aware features differently
-        features_channnel_aware = [f for f, d in global_features.items() if d.get("_channel_aware", False)]
-        features_no_channel = [f for f, d in global_features.items() if not d.get("_channel_aware", False)]
+        features_channnel_aware = [f for f, d in global_features.items() if d.get("channel_aware", False)]
+        features_no_channel = [f for f, d in global_features.items() if not d.get("channel_aware", False)]
 
         def compute_assume_single_channel(
             _image: vigra.VigraArray, _labels: vigra.VigraArray, axes, _features: List[str]
