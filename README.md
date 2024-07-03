@@ -5,11 +5,11 @@ Scikit-image regionprops for ilastik object classification.
 
 ## TODOs:
 
-- [ ] Add dependencies to `environment.yaml` and `pyproject.toml`
-- [ ] Development setup
-  - [ ] create conda environment
-  - [ ] install package in editable mode
-- [ ] test initial plugin setup
+- [x] Add dependencies to `environment.yaml` and `pyproject.toml`
+- [x] Development setup
+  - [x] create conda environment
+  - [x] install package in editable mode
+- [x] test initial plugin setup
 
 
 ## Development setup
