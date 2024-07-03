@@ -1,0 +1,8 @@
+[Core]
+Name = skimage_ilastik_oc_features
+Module = skimage4ilastik
+
+[Documentation]
+Author = Dominik Kutra
+Version = 0.0.1
+Description = Scikit-image regionprops for ilastik object classification.
