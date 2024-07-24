@@ -15,7 +15,7 @@ requires-python = ">=3.9"
 
 
 [project.entry-points."ilastik.objectfeatures"]
-thepackage_features = "skimage_ilastik_oc_features"
+skimage_ilastik_oc_features = "skimage_ilastik_oc_features"
 
 [tool.setuptools.package-data]
-skimage_ilastik_oc_features = ["skiamge4ilastik.yapsy-plugin"]
+skimage_ilastik_oc_features = ["*.yapsy-plugin"]
